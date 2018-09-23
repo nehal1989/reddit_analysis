@@ -13,7 +13,7 @@ print(reddit.user.me())
 
 climbing_sr = reddit.subreddit('Climbing')
 
-top_climbing = climbing_sr.top(limit=100)
+top_climbing = climbing_sr.top(limit=10)
 
 for thing in top_climbing:
     print(thing.title)
