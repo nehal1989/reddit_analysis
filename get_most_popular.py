@@ -23,7 +23,7 @@ for page_number in range(1, number_of_pages+1):
     for subs in all_subreddits:
         list_of_subreddits.append(subs.attrs['data-target-subreddit'])
 
-    most_active = recent_activity + list_of_subreddits[0:data_per_column*1]
+    most_active = most_active + list_of_subreddits[0:data_per_column*1]
     most_subscribed = most_subscribed + list_of_subreddits[data_per_column:data_per_column*2]
     most_growth = most_growth + list_of_subreddits[data_per_column*2:data_per_column*3]
 
