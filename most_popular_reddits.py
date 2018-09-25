@@ -8,9 +8,11 @@ with open('subreddit_list.txt') as file:
         reg_results = my_regex.search(lines.strip())
         list_of_subreddits.append(reg_results.group(1))
 
-output_filename = "/Users/Nehal/Dropbox/Programming/Reddit_Project/cleaned_subreddits.csv"
+output_filename = "/Users/Nehal/Dropbox/Programming/Reddit_Project/most_subscribed_cleaned_subreddits.csv"
 
-with open(output_filename, "w") as output:
+with open(output_filename, "w", newline='') as output:
     writer = csv.writer(output)
     for val in list_of_subreddits:
         writer.writerow([val])
+
+with open()
