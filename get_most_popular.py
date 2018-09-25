@@ -27,9 +27,14 @@ for page_number in range(1, number_of_pages+1):
     most_subscribed = most_subscribed + list_of_subreddits[data_per_column:data_per_column*2]
     most_growth = most_growth + list_of_subreddits[data_per_column*2:data_per_column*3]
 
-output_filename = "/Users/Nehal/Dropbox/Programming/Reddit_Project/most_subscribed_subreddits.csv"
+output_filename = "/Users/Nehal/Dropbox/Programming/Reddit_Project/most_subbed_subreddits.csv"
 
 with open(output_filename, "w", newline='') as output:
     writer = csv.writer(output)
     for val in most_subscribed:
         writer.writerow([val])
+
+with open('most_subbed_subreddits.csv') as file:
+    reader = csv.reader(file)
+    for i in reader:
+        print(i[0])
